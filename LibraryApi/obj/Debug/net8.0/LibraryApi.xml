@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryApi</name>
+    </assembly>
+    <members>
+        <member name="M:LibraryApi.Controllers.BooksController.GetBooks">
+            <summary>
+            Retrieves a list of all books available in the library.
+            </summary>
+            <returns>
+            A list of all books in the system.
+            </returns>
+            <response code="200">A list of books was returned successfully.</response>
+            <response code="204">No books were found in the library.</response>
+        </member>
+        <member name="M:LibraryApi.Controllers.BooksController.GetBook(System.Guid)">
+            <summary>
+            Retrieves the details of a specific book by its unique ID.
+            </summary>
+            <param name="id">The unique identifier of the book.</param>
+            <returns>
+            A specific book's details if found; otherwise, a 404 Not Found response.
+            </returns>
+            <response code="200">The book was found and returned successfully.</response>
+            <response code="404">The book with the specified ID was not found.</response>
+        </member>
+        <member name="M:LibraryApi.Controllers.BooksController.CreateBook(LibraryApi.Models.Requests.BookRequest)">
+            <summary>
+            Creates a new book in the system
+            </summary>
+            <param name="request">The object containing the book details.</param>
+            <returns>
+            A status code indicating the result of the update operation.
+            </returns>
+            <response code="200">The book was successfully created.</response>
+            <response code="400">Bad request, the provided data is invalid.</response>
+        </member>
+        <member name="M:LibraryApi.Controllers.BooksController.UpdateBook(System.Guid,LibraryApi.Models.Requests.BookRequest)">
+            <summary>
+            Updates an existing book in the system.
+            </summary>
+            <param name="id">The unique ID of the book to update.</param>
+            <param name="request">The object containing the book details.</param>
+            <returns>
+            A status code indicating the result of the update operation.
+            </returns>
+            <response code="200">The book was successfully updated.</response>
+            <response code="404">Not found, the book with the specified ID does not exist.</response>
+            <response code="400">Bad request, the provided data is invalid.</response>
+        </member>
+        <member name="M:LibraryApi.Controllers.BooksController.DeleteBook(System.Guid)">
+            <summary>
+            Deletes a book from the system.
+            </summary>
+            <param name="id">The unique ID of the book to delete.</param>
+            <returns>
+            A status code indicating the result of the delete operation.
+            </returns>
+            <response code="200">The book was successfully deleted.</response>
+            <response code="404">Not found, the book with the specified ID does not exist.</response>
+        </member>
+        <member name="T:LibraryApi.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryApi.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryApi.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:LibraryApi.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
