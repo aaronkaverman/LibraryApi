@@ -20,7 +20,7 @@ LibraryApi is a RESTful web API built using ASP.NET Core that allows users to ma
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/username/LibraryApi.git
+   git clone https://github.com/aaronkaverman/LibraryApi
 
 2. **Navigate to the project directory:**:
    ```bash
